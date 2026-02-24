@@ -1,7 +1,8 @@
 from pypdf import PdfReader
 
-reader = PdfReader("Reasoning Models Don't Always Say What They Think.pdf")
+file_path = input("ファイルのパスを入力してください")
 
+reader = PdfReader(file_path)
 pages = len(reader.pages)
 
 for i in range(pages):

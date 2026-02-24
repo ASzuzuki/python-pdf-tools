@@ -25,10 +25,13 @@ pip install -r requirements.txt
 - テキスト抽出: 一つのPDFから、任意のページのテキストを抽出する（最初と最後のページを指定）
 - 「6: 終了」を選択すると終了する
 
-## 備考
+## 備考1
 以下のファイルは練習用に作成したもので、各メニューの機能を個別に実行可能
 - 01_pdf_reader.py
 - 02_pdf_metadata_extractor.py
 - 03_merge_odf.py
 - 04_split_pdf.py
 - 05_extract_pdf.py
+
+## 備考2
+- 06_pdf_tools_improved.pyは、pdf_tools.pyの改善バージョン（main.pyとは連携していない）
