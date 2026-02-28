@@ -4,7 +4,7 @@ from pdf_tools import read_pdf, show_pdf_info, merge_pdfs, split_pdf, extract_te
 
 while True:
     print("以下のメニューから番号を選択してください")
-    user_input = input("1: PDF読取 2: メタデータ表示 3: PDF結合 4: PDF分割 5: テキスト抽出 6: 終了")    # メニュー
+    user_input = input(f"1: PDF読取\n 2: メタデータ表示\n 3: PDF結合\n 4: PDF分割\n 5: テキスト抽出\n 6: 終了")    # メニュー
     input_list = ["1", "2", "3", "4", "5", "6"]
     if user_input not in input_list:
         print("無効な入力です")
