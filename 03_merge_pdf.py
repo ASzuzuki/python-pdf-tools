@@ -10,9 +10,8 @@ def merge_pdfs(file_list, output_path):
     writer = PdfWriter()
     for path in file_list:
         reader = PdfReader(path)
-        pages = len(reader.pages)
-        for i in range(pages):
-            merged_text = writer.add_page(reader.pages[i])
+        for page in reader.pages:
+            writer.add_page(page)
     with open(output_path, "wb") as f:
         writer.write(f)
 

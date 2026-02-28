@@ -5,6 +5,6 @@ file_path = input("ファイルのパスを入力してください")
 reader = PdfReader(file_path)
 pages = len(reader.pages)
 
-for i in range(pages):
-    text = reader.pages[i].extract_text()
-    print(text)
+for i, item in enumerate(reader.pages):
+    text = item.extract_text()
+    print(f"{i}: {text}")

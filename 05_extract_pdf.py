@@ -6,9 +6,8 @@ end_page = int(input("最後のページを入力してください: "))
 
 def extract_text(input_path, start_page, end_page, output_path):
     reader = PdfReader(input_path)
-    text = ""
-    for i in range(start_page - 1, end_page):
-        text += reader.pages[i].extract_text()
+    texts = [page.extract_text() for page in reader.pages[start_page - 1: end_page]]
+    text = "".join(texts)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(text)
 
